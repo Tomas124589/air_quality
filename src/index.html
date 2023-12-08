@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIA - Kvalita ovzduší</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/vendor/leaflet/leaflet.js"></script>
+
+    <script src="js/leaflet.js"></script>
+    <script src="js/openaq.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/vendor/leaflet/leaflet.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Kvalita ovzduší</h1>
+</header>
+
+<div class="filter-wrapper">
+    <div class="parent">
+        <p>Filtry</p>
+        <form id="map-filters">
+
+            <div class="col">
+                <label>
+                    <span>PM10 Minimum</span>
+                    <input type="number" name="pm10-min" placeholder="PM10 Minimum" min="0">
+                </label>
+
+                <label>
+                    <span>PM10 Maximum</span>
+                    <input type="number" name="pm10-max" placeholder="PM10 Maximum" min="0">
+                </label>
+            </div>
+
+            <div class="col">
+                <label>
+                    <span>PM25 Minimum</span>
+                    <input type="number" name="pm25-min" placeholder="PM25 Minimum" min="0">
+                </label>
+
+                <label>
+                    <span>PM25 Maximum</span>
+                    <input type="number" name="pm25-max" placeholder="PM25 Maximum" min="0">
+                </label>
+            </div>
+
+            <input type="submit" value="Filtrovat">
+        </form>
+    </div>
+</div>
+
+<div id="map">
+    <button id="get-air-quality">Zjistit kvalitu ovzduší</button>
+</div>
+
+<footer>
+    <span>Zdroj: <a target="_blank" href="https://openaq.org/">https://openaq.org/</a></span>
+</footer>
+
+</body>
+
+</html>
